@@ -1,4 +1,5 @@
-const { redisPort, redisIP, disableRedis, config } = require('./lib/config');
+const { config } = require('./lib/config');
+const RedisDataLoader = require('./lib/redisDataLoader');
 
-
-exports.config = config;
+module.exports = RedisDataLoader;
+module.exports.config = config;
