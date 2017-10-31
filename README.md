@@ -22,13 +22,15 @@ You can also disable redis usage. this will use dataloader normally with caching
 process.env.REDIS_PORT = 6379; // default: 6379;
 process.env.REDIS_IP = '127.0.0.1'; // default: '127.0.0.1';
 process.env.DISABLE_REDIS = false; // default: false
+process.env.REDIS_EXPIRE = 60; // default: undefined. value is seconds
 
 // 2. using config function
 const RedisDataLoader = require('redis-cache-dataloader');
 RedisDataLoader.config({
   redisPort: process.env.REDIS_PORT, // default: 6379;
   redisIP: process.env.REDIS_IP, // default: '127.0.0.1';
-  disableRedis: process.env.DISABLE_REDIS // default: false
+  disableRedis: process.env.DISABLE_REDIS, // default: false
+  expire: process.env.REDIS_EXPIRE // default: undefined
 });
 ```
 
