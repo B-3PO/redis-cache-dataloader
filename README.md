@@ -62,4 +62,15 @@ loader.load(1);
 
 // clear
 loader.clear(1);
+
+
+// Disable cache on loader
+var loader = new RedisDataLoader('itemPrefix', keys => {
+  // connect to data source. Check out Loading Data Examples link above
+  return new Promise((resolve, reject) => {
+    resolve(keys.map(key => {
+      return { id: key };
+    }));
+  });
+}, { cache: false });
 ```
