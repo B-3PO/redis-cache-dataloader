@@ -1,6 +1,6 @@
 {
   "name": "redis-cache-dataloader",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "A wrapper for dataloader that uses redis as a cache layer in place of the default memory cache",
   "main": "index.js",
   "repository": {
